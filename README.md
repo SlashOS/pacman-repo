@@ -15,7 +15,7 @@ To add our repository to your Pacman sources and install packages, follow these 
 Open a terminal and run the following commands:
 
 ```bash
-grep -q "\[pacman-repo\]" /etc/pacman.conf && echo "Repository already exists" || (echo -e "\n[pacman-repo]\nSigLevel = Optional TrustedOnly\nServer = https://slashos.github.io/\$repo/\$arch" | sudo tee -a /etc/pacman.conf > /dev/null && echo "Repository added successfully")
+grep -q "\[slashos\]" /etc/pacman.conf && echo "Repository already exists" || (echo -e "\n[slashos]\nSigLevel = Optional TrustedOnly\nServer = https://slashos.github.io/pacman-repo/\$arch" | sudo tee -a /etc/pacman.conf > /dev/null && echo "Repository added successfully")
 ```
 
 ### 2. Update Package Index
@@ -43,5 +43,6 @@ If you encounter any issues or have questions, please reach out to us:
 - **Community Forum:** [Forum Link](https://slashos.github.io)
 
 Thank you for using SlashOS's Pacman Repository!
+
 
 ---
